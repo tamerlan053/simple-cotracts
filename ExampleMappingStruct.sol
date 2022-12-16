@@ -7,7 +7,7 @@ contract ExampleMappingStruct {
     struct Transaction {
         uint amount;
         uint timestamp;
-    }
+    } 
 
     struct Balance {
         uint totalBalance;
