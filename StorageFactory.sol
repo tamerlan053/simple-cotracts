@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT 
 
 pragma solidity ^0.8.13;
 
@@ -19,5 +19,5 @@ contract StorageFactory {
     function sfGet(uint _simpleStorageIndex) public view returns(uint) {
         SimpleStorage simpleStorage =  simpleStorageArray[_simpleStorageIndex];
         return simpleStorage.retrieve();
-    }
-}
+    }  
+} 
