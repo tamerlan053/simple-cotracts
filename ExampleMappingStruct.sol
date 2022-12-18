@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT 
 
 pragma solidity ^0.8.15; 
 
@@ -21,7 +21,7 @@ contract ExampleMappingStruct {
 
 
     function getBalance(address _addr) public view returns(uint) {
-        return balanceReceived[_addr].totalBalance;
+        return balanceReceived[_addr].totalBalance; 
     }
 
     function depositMoney() public payable {
@@ -38,7 +38,7 @@ contract ExampleMappingStruct {
         //record a new withdrawal
         Transaction memory withdrawal = Transaction(msg.value, block.timestamp);
         balanceReceived[msg.sender].withdrawals[balanceReceived[msg.sender].numWithdrawals] = withdrawals;
-        balanceReceived[msg.sender].numWithdrawals++;
+        balanceReceived[msg.sender].numWithdrawals++; 
 
         //send the amount out.
         _to.transfer(_amount);
