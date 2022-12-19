@@ -1,8 +1,8 @@
-//SPDX-License-Identifier: MIT 
+//SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.13;
 
-import "./SimpleStorage.sol"; 
+import "./SimpleStorage.sol";
 
 contract StorageFactory {
     SimpleStorage[] public simpleStorageArray;
