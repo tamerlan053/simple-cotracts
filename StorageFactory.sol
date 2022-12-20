@@ -18,6 +18,6 @@ contract StorageFactory {
 
     function sfGet(uint _simpleStorageIndex) public view returns(uint) {
         SimpleStorage simpleStorage =  simpleStorageArray[_simpleStorageIndex];
-        return simpleStorage.retrieve();
+        return simpleStorage.retrieve(); 
     }  
 } 
