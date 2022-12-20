@@ -15,7 +15,7 @@ contract ExampleMappingStruct {
         mapping(uint => Transaction) deposits;
         uint numWithdrawals;
         mapping(uint => Transaction) withdrawals;
-    }
+    } 
 
     mapping(address => Balance) public balanceReceived;
 
