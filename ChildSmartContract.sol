@@ -18,4 +18,4 @@ contract Wallet {
     function payContract() public payable {
         payment = new PaymentReceived(msg.sender, msg.value);
     }
-}
+} 
