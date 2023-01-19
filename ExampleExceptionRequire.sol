@@ -10,7 +10,7 @@ contract ExampleExceptionRequire {
     }
 
     function withdrawMoney(address payable _to, uint _amount) public {
-        require(_amount <= balanceReceived[msg.sender], "Not enough funds!");
+        require(_amount <= balanceReceived[msg.sender], "Not enough assets!");
         balanceReceived[msg.sender] -= _amount;
         _to.transfer(_amount);
     }
