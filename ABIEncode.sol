@@ -4,7 +4,7 @@ interface IERC20 {
     function transfer(address, uint) external;
 }
 
-contract Token {
+contract Coin {
     function transfer(address, uint) external {}
 }
 
