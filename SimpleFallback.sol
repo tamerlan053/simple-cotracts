@@ -9,9 +9,7 @@ contract Fallback {
         emit Log("fallback", gasleft());
     }
 
-    receive() external payable {
-        emit Log("receive", gasleft());
-    }
+   
 
     function getBalance() public view returns (uint) {
         return address(this).balance;
