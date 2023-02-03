@@ -4,7 +4,11 @@ pragma solidity ^0.8.13;
 
 contract Fallback {
     event Log(string func, uint gas);
-
+    
+    receive() external payable {
+        emit Log("receive", gasleft());
+    }
+    
     fallback() external payable {
         emit Log("fallback", gasleft());
     }
