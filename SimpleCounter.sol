@@ -8,9 +8,7 @@ contract SimpleCounter {
 
     address public owner;
 
-    constructor() {
-        owner = msg.sender;
-    }
+    
 
     function countEvenNumbers() public view returns(uint) {
         uint count = 0;
