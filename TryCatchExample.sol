@@ -18,7 +18,7 @@ contract ErrorHandling {
     function catchTheError() public {
         WillThrow will = new WillThrow();
         try will.aFunction() {
-            //add code here
+            //add code here!
         } catch Error(string memory reason) {
             emit ErrorLogging(reason);
         } catch Panic(uint errorCode) {
