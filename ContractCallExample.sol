@@ -9,7 +9,9 @@ contract ContractOne {
         addressBalance[msg.sender] += msg.value;
     }
 
-
+    receive() external payable {
+        deposit();
+    }
 }
 
 
