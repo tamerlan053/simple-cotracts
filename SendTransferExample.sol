@@ -16,14 +16,7 @@ contract Sender {
     }
 }
 
-contract ReceiverNoAction {
 
-    function balance() public view returns(uint) {
-        return address(this).balance;
-    }
-
-    receive() external payable{}
-}
 
 contract ReceiverAction {
     uint public balanceReceived;
