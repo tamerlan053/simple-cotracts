@@ -9,9 +9,7 @@ contract TheBlockchainMessenger {
 
     string public theMessage;
 
-    constructor () {
-        owner = msg.sender;
-    }
+   
 
     function updateTheMessage (string memory _newMessage) public {
         if (msg.sender == owner) {
