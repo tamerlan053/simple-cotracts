@@ -12,4 +12,10 @@ contract PaymentReceived {
     }
 }
 
+contract Wallet {
+    PaymentReceived public payment;
 
+    function payContract() public payable {
+        payment = new PaymentReceived(msg.sender, msg.value);
+    }
+}
