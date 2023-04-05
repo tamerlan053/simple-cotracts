@@ -24,15 +24,3 @@ contract ReceiverNoAction {
 
     receive() external payable{}
 }
-
-contract ReceiverAction {
-    uint public balanceReceived;
-
-    receive() external payable {
-        balanceReceived += msg.value;
-    }
-
-    function balance() public view returns(uint) {
-        return address(this).balance;
-    }
-}
