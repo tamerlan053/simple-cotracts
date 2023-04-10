@@ -16,7 +16,5 @@ contract EtherWallet {
         payable(msg.sender).transfer(_amount);
     }
 
-    function getBalance() external view returns (uint) {
-        return address(this).balance;
-    }
+   
 }
