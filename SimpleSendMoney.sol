@@ -17,7 +17,5 @@ contract SendWithdrawMoney {
         to.transfer(getContractBalance());
     }
 
-    function withdrawToAddress(address payable to) public {
-        to.transfer(getContractBalance());
-    }
+
 }
