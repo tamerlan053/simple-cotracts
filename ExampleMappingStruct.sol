@@ -9,13 +9,7 @@ contract ExampleMappingStruct {
         uint timestamp;
     }
 
-    struct Balance {
-        uint totalBalance;
-        uint numDeposits;
-        mapping(uint => Transaction) deposits;
-        uint numWithdrawals;
-        mapping(uint => Transaction) withdrawals;
-    }
+
 
     mapping(address => Balance) public balances;
 
