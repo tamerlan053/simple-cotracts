@@ -12,10 +12,7 @@ contract File {
         myUint = _myUint;
     }
 
-    receive() external payable {
-        lastValueSent = msg.value;
-        lastFunctionCalled = "received";
-    }
+
 
     fallback() external payable {
         lastValueSent = msg.value;
