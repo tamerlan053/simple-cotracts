@@ -7,7 +7,7 @@ contract SmartWallet {
     address payable public owner;
 
     mapping(address => uint) public allowance;
-    mapping(address => uint) public isAllowedToSend;
+    mapping(address => bool) public isAllowedToSend;
 
     mapping(address => bool) public guardians;
     address payable nextOwner;
@@ -38,10 +38,24 @@ contract SmartWallet {
         }
     }
 
+    function setAllowance(address _for, uint _amount) public {
+        require(msg.sender == owner, "You are not the owner!");
+        allowance[_for] = _amount;
+
+        if (_amount > 0) {
+            isAllowedToSend[_for] = true;
+        } else {
+            isAllowedToSend[_for] = false;
+        }
+    }
+
     function transfer(address payable _to, uint _amount, bytes memory _payload) public returns(bytes memory) {
         //require (msg.sender == owner, "You are not the owner, aborting!");
         if(msg.sender != owner) {
             require(isAllowedToSend[msg.sender], "You are not allowed to send anything from this contract, aboting");
+            require(allowance[msg.sender] >= _amount, "You are trying to send more than allowed, stop!");
+
+            allowance[msg.sender] -= _amount;
         }
 
         (bool success, bytes memory returnData) = _to.call{value: _amount}(_payload);
