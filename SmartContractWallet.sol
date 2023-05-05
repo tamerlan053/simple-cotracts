@@ -24,6 +24,20 @@ contract SmartWallet {
         guardians[_guardian] = _isGuardian;
     }
 
+    function proposeOwner(address payable _newOwner) public {
+        require(guardians[msg.sender], "You are not guardian of this wallet, aborting!");
+        require(nextOwnerVotedGaurdianBool[_newOwner][msg.sender] == false, "You already voted, aborting");
+        if (_newOwner != nextOwner) {
+            nextOwner = _newOwner;
+            guardiansResetCount = 0;
+        }
+
+        if (guardiansResetCount >= confitmationsFromGuardiansForReset) {
+            owner = nextOwner;
+            nextOwner = payable(address(0));
+        }
+    }
+
     function transfer(address payable _to, uint _amount, bytes memory _payload) public returns(bytes memory) {
         //require (msg.sender == owner, "You are not the owner, aborting!");
         if(msg.sender != owner) {
