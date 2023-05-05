@@ -3,10 +3,17 @@
 pragma solidity 0.8.16;
 
 contract SmartWallet {
-    address payable owner;
+
+    address payable public owner;
 
     mapping(address => uint) public allowance;
     mapping(address => uint) public isAllowedToSend;
+
+    mapping(address => bool) public guardians;
+    address payable nextOwner;
+    mapping (address => mapping(address => bool)) nextOwnerVotedGaurdianBool;
+    uint guardiansResetCount;
+    uint public constant confitmationsFromGuardiansForReset = 3;
 
     constructor() {
         owner = payable(msg.sender);
