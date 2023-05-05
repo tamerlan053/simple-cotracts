@@ -19,6 +19,11 @@ contract SmartWallet {
         owner = payable(msg.sender);
     }
 
+    function setGuardian(address _guardian, bool _isGuardian) public {
+        require(msg.sender == owner, "You are not the owner, aborting!");
+        guardians[_guardian] = _isGuardian;
+    }
+
     function transfer(address payable _to, uint _amount, bytes memory _payload) public returns(bytes memory) {
         //require (msg.sender == owner, "You are not the owner, aborting!");
         if(msg.sender != owner) {
