@@ -8,7 +8,7 @@ contract EventExample {
     event TokenSent(address _from, address _to, uint _amount);
 
     constructor() {
-        tokenBalance[msg.sender] = 100;
+        tokenBalance[msg.sender] += 100;
     }
 
     function sendToken(address _to, uint _amount) public returns(bool) {
@@ -17,6 +17,6 @@ contract EventExample {
         tokenBalance[_to] += _amount;
 
         emit TokenSent(msg.sender, _to, _amount);
-        return true;
+        return false;
     }
 }
