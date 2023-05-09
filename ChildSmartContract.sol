@@ -2,6 +2,10 @@
 
 pragma solidity ^0.8.15;  
 
+constructor {
+
+}
+
 contract PaymentReceived {
     address public from;
     uint public amount;
