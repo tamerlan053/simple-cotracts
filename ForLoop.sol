@@ -3,6 +3,9 @@
 pragma solidity ^0.8.14;
 
 contract Loop {
+
+        uint public balanceReceived;
+        
         function loop() public {
         for (uint i = 0; i < 10; i++) {
             if (i == 3) {
