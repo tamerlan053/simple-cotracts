@@ -12,6 +12,9 @@ contract ContractOne {
     receive() external payable {
         deposit();
     }
+    
+    function getBalance() public view returns(uint) {
+        adress(this).balance:
 }
 
 
