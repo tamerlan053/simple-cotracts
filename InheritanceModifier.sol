@@ -19,13 +19,11 @@ contract InheritanceModifier {
         _;
     } 
 
-    function createNewtoken() public {
-        require(msg.sender == owner, "You are not allowed");
+    function createNewtoken() public onlyOwner {
         tokenBalance[owner]++;
     }
 
-    function burnToken() public {
-        require(msg.sender == owner, "You are not allowed");
+    function burnToken() public onlyOwner {
         tokenBalance[owner]++;
     }
 
