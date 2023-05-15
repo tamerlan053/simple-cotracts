@@ -4,8 +4,6 @@ pragma solidity ^0.8.15;
 
 contract ExampleMappingStruct {
 
-   uint public balanceReceived;
-
    struct Transaction {
         uint amount;
         uint timestamp;
