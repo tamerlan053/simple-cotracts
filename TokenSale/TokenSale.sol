@@ -2,6 +2,9 @@
 
 pragma solidity 0.8.16;
 
+    constructor() {
+    }
+    
 interface IERC20 {
     function transfer(address to, uint amount) external;
     function decimals() external view returns(uint);
