@@ -4,7 +4,7 @@ pragma solidity 0.8.16;
     address public owner;
 
     constructor() {
-    
+    owner = msg.sender;
     }
     
 interface IERC20 {
