@@ -4,7 +4,6 @@ pragma solidity ^0.8.15;
 
 contract ExampleMappingStruct {
    
-   constructor() {}
 
    struct Transaction {
         uint amount;
