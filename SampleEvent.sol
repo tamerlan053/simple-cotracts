@@ -4,9 +4,6 @@ pragma solidity ^0.8.15;
 
 contract EventExample {
 
-    constructor() {
-    uint public balance;
-    }
     mapping (address => uint) public tokenBalance;
 
     event TokenSent(address _from, address _to, uint _amount);
