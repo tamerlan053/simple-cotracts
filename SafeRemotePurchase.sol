@@ -23,15 +23,7 @@ contract BlindAuction {
     modifier onlyBefore(uint _time) { require(now < _time); _; }
     modifier onlyAfter(uint _time) { require(now > _time); _; }
 
-    constructor(
-        uint _biddingTime,
-        uint _revealTime,
-        address payable _beneficiary
-    ) public {
-        beneficiary = _beneficiary;
-        biddingEnd = now + _biddingTime;
-        revealEnd = biddingEnd + _revealTime;
-    }
+
 
     function bid(bytes32 _blindedBid)
         public
