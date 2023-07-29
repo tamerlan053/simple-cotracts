@@ -1,7 +1,5 @@
 pragma solidity >0.4.23 <0.6.0;
 
-contract LinkedWallet {}
-
 contract BlindAuction {
     struct Bid {
         bytes32 blindedBid;
