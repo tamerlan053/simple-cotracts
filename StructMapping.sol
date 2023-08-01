@@ -6,4 +6,8 @@ contract StructMapping {
     mapping (address => uint) public balance;
 
     address public owner = msg.sender;
-}
+
+    function contractBalance() public view returns(uint) {
+        return address(this).balance;
+    }
+ }
