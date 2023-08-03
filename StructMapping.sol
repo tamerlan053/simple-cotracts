@@ -16,5 +16,9 @@ contract StructMapping {
         return address(this).balance;
     }
 
+    function transfer(uint amount) public {
+        
+    }
+
     receive() external payable{}
  }
