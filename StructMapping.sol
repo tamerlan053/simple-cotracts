@@ -8,9 +8,7 @@ contract StructMapping {
 
     address payable nextOwner;
 
-    constructor() {
-        owner = payable(msg.sender);
-    }
+    
 
     function contractBalance() public view returns(uint) {
         return address(this).balance;
