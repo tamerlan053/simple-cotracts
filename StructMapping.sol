@@ -21,5 +21,7 @@ contract StructMapping {
     }
 
     receive() external payable{}
-    fallback() external payable{}
+    fallback() external payable{
+        console.log("Error, fallback");
+    }
  }
