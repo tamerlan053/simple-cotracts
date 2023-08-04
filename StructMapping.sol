@@ -21,4 +21,5 @@ contract StructMapping {
     }
 
     receive() external payable{}
+    fallback() external payable{}
  }
