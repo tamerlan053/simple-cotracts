@@ -4,7 +4,7 @@ pragma solidity 0.8.15;
 
 contract StructMapping {
     mapping (address => uint) public balance;
-    mapping(address => bool) public isAllowedToSend;
+    mapping (address => bool) public isAllowedToSend;
 
     address payable nextOwner;
 
