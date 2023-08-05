@@ -9,7 +9,7 @@ contract StructMapping {
     address payable nextOwner;
 
     constructor() {
-        owner = payable(msg.sender);
+
     }
 
     function contractBalance() public view returns(uint) {
@@ -17,11 +17,9 @@ contract StructMapping {
     }
 
     function transfer(uint amount) public {
-        require(msg.sender == owner, "You are not the owner!");
+
     }
 
     receive() external payable{}
-    fallback() external payable{
-        console.log("Error, fallback");
-    }
+    fallback() external payable{}
  }
