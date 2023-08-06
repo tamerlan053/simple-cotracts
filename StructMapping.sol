@@ -11,7 +11,7 @@ contract StructMapping {
     address payable nextOwner;
 
     constructor() {
-
+        owner = msg.sender;
     }
 
     function contractBalance() public view returns(uint) {
