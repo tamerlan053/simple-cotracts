@@ -19,7 +19,7 @@ contract StructMapping {
     }
 
     function transfer(uint amount) public {
-
+       require(msg.sender, "You are not owner")
     }
 
     receive() external payable{}
