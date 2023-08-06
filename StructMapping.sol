@@ -6,6 +6,8 @@ contract StructMapping {
     mapping (address => uint) public balance;
     mapping (address => bool) public isAllowedToSend;
 
+   mapping (uint => bool) public allowed;
+ 
     address payable nextOwner;
 
     constructor() {
