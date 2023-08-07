@@ -14,9 +14,7 @@ contract StructMapping {
         owner = msg.sender;
     }
 
-    function contractBalance() public view returns(uint) {
-        return address(this).balance;
-    }
+    
 
     function transfer(uint amount) public {
        require(msg.sender, "You are not the owner");
