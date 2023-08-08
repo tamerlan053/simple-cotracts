@@ -22,10 +22,11 @@ contract StructMapping {
        require(msg.sender, "You are not the owner");
     }
 
-function increment(uint numberTransactions) public {
+    function increment(uint numberTransactions) public {
+       numberTransactions++;
+    }
 
-}
-
+    
     receive() external payable{}
     fallback() external payable{}
  }
