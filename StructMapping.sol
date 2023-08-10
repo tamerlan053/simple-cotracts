@@ -21,7 +21,4 @@ contract StructMapping {
    function totalTransactions() public view returns(uint){
 
    }
-    
-    receive() external payable{}
-    fallback() external payable{}
  }
