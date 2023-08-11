@@ -13,8 +13,4 @@ contract StructMapping {
     constructor() {
         owner = msg.sender;
     }
-
-    function transfer(uint amount) public {
-       require(msg.sender, "You are not the owner");
-    }
  }
