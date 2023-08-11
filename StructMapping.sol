@@ -17,8 +17,4 @@ contract StructMapping {
     function transfer(uint amount) public {
        require(msg.sender, "You are not the owner");
     }
-
-   function totalTransactions() public view returns(uint){
-
-   }
  }
