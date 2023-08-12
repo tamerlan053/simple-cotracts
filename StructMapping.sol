@@ -4,7 +4,9 @@ pragma solidity 0.8.17;
 
 contract StructMapping {
     
-    function() {}
+    function transfer() public {
+
+    }
 
    mapping (uint => bool) public allowed;
  
