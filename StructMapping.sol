@@ -12,6 +12,8 @@ contract NFTPool {
    function sendNFT() public {
 
    }
+
+   receive() external payable{};
 }
 
 
