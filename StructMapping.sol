@@ -8,13 +8,6 @@ contract NFTPool {
     constructor {
 
     }
-
-   function sendNFT() public {
-
-   }
-
-   
-   
 }
 
 
