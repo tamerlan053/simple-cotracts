@@ -13,7 +13,7 @@ contract NFTPool {
 
    }
 
-   receive() external payable{};
+   
    
 }
 
