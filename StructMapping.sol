@@ -10,6 +10,10 @@ contract Falm {
      owner == msg.sender;
     }
 
+    struct Balance {
+        uint amountSent;
+    }
+
 
 }
 
