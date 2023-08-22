@@ -14,6 +14,7 @@ contract Falm {
         uint amountSent;
     }
 
+    mapping (address => Balance) public balances;
 
 }
 
