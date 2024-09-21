@@ -14,11 +14,13 @@ contract SendWithdrawMoney {
     }
 
     function withdrawAll() public {
+        balanceReceived -= getContractBalance();
         address payable to = payable(msg.sender);
         to.transfer(getContractBalance());
     }
 
-    function withdrawToAddress(address payable to) public {
-        to.trasfer(getContractBalance());
+    function withdrawToAddress(address payable _to) public {
+        balanceReceived -= getContractBalance();
+        _to.transfer(getContractBalance());
     }
 }
